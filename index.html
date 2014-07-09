@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Develop NYC</title>
+    <title>DevelopNYC</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="/static/images/favicon.png">
+      
     <style type="text/css">
+
         html, body {
             height:100%;
+            font-family: Helvetica, Arial, sans-serif;
+            color:#B2B2B2;
+            font-size:12px;
         }
-        .vertical_centered {
+        .outer_frame {
             position:absolute;
-            top:50%;
+            /*top:50%;*/
+            top:50px;
             left:50%;
             margin-left:-222px;
-            margin-top:-107px;
+            /*margin-top:-307px;*/
+        }
+        .info {
+            padding:10px 0 20px 30px;
+            /*display:none;*/
+            /*margin-bottom:20px;*/
+        }
+        .info .email {
+            text-decoration: none;
+            color:#B2B2B2;
+        }
+        .info div {
+            margin-bottom:5px;
         }
         h1 {
             text-indent:-1000em;
@@ -20,11 +41,92 @@
             width:444px;
             height:217px;
         }
+        .services {
+            margin-top:10px;
+            padding-left:30px;
+            margin-bottom:20px;
+        }
+        .services h2 {
+            font-size:18px;
+            color:#82C28F;
+        }
+        .services ul {
+            padding:0 0 0 20px;
+        }
+        .services ul li {
+            margin-bottom:4px;
+        }
+        a {
+            color:#69f;
+        }
     </style>
 </head>
 <body>
-    <div class="vertical_centered">
-        <a href="mailto:gregory.tomlinson+developnyc@gmail.com"><h1>Develop NYC</h1></a>
+   
+    <div class="outer_frame">
+        <h1>DevelopNYC</h1>
+        <div class="info">
+
+            <div class="title_role">
+                Gregory Tomlinson, Principal Developer
+            </div> 
+            <div class="telephone">
+                T: 1-347-693-8981
+            </div>      
+            <div class="">
+                E: <script type="text/javascript"><!--
+    var zebfvfd = ['o','g','e','n','a','e','.','a',':','a','m','n','@','s','.','m','.','=','e','a','o','"','"','i','t','o','l',' ','g','c','o','a','@','s','a','<','i','m','m','i','i','n',' ','<','g','h','i','>','l','i','n','l','/','"','=','s','g','o','o','y','e','c','l','"','g','r','l','t','o','m','>','r','s','r','y','c','g','a','l','f','m','r','m','o','t','r','.','o','m','l'];var dhhvbfo = [31,59,61,75,54,18,82,36,15,79,69,29,76,30,23,78,66,50,5,1,14,51,8,11,67,41,70,2,62,45,25,10,33,73,88,0,37,85,9,55,80,32,44,86,34,3,28,58,27,71,72,56,87,57,7,49,16,84,63,22,52,83,81,43,19,21,46,24,20,53,89,17,48,64,65,40,77,47,12,6,35,4,42,74,13,60,39,68,26,38];var oow= new Array();for(var i=0;i<dhhvbfo.length;i++){oow[dhhvbfo[i]] = zebfvfd[i]; }for(var i=0;i<oow.length;i++){document.write(oow[i]);}
+    // --></script> 
+            </div>      
+        </div>
+        <div class="services">
+            <h2>Services</h2>
+            <ul>
+                <li>Web+Design Development</li>
+                <li>HTML/CSS/JavaScript</li>
+                <li>Python, Lua</li>
+                <li>Mobile+Web</li>
+                <li>Games</li>
+            </ul>
+        </div>
+        <div class="services">
+            <h2>Games</h2>
+            <ul>
+                <li>Skwerd, iOS <a target="new" href="http://playskwerd.com">link</a></li>
+                <li>Giphy Memory, web <a target="new" href="http://memory.labs.giphy.com">link</a></li>
+                <!-- <li>Cookie Quest, web<a target="new" href="http://cookie-quest.developnyc.com/">link</a></li> -->
+                <!-- <li><a href="">link</a></li> -->
+
+            </ul>
+        </div>
+        <div class="services">
+            <h2>Clients & Projects</h2>
+            <ul>
+                <li>Betaworks</li>
+                <li>Giphy</li>
+                <li>Play Skwerd</li>
+                <li>Tapestry</li>
+                <li>Alphaworks</li>
+                <li>Hiho Batik</li>
+                <li>Wayfinder</li>
+                <li>PhotoSwirl</li>
+                <li>TipTop</li>
+                <li>Telecast</li>
+            </ul>
+        </div>
+        
+        
     </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-49501319-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>    
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
 </body>
 </html>
