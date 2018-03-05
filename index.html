@@ -4,120 +4,367 @@
     <title>DevelopNYC</title>
     <link rel="icon" 
       type="image/png" 
-      href="/static/images/favicon.png">
+      href="/images/favicon.png">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-    <style type="text/css">
+<style type="text/css">
+html, body {
+    height:100%;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    color:#666;
+    font-size:14px;
+    line-height: 1.5em;
+}
+* {
+    box-sizing: content-box;
+}
+body {
+    margin:0 0 150px;
+}
+a {
+    color:#69c;
+    text-decoration: none;
+}
+.outer_frame {
+    width:444px;
+    margin:70px auto 150px;
+}
+.contact_info {
+    padding:10px 0 20px 30px;
+    /*padding:10px 0 20px;*/
+    /*width:444px;*/
+}
+.contact_info .email {
+    text-decoration: none;
+    color:#888;
+}
+.contact_info div {
+    margin-bottom:5px;
+}
+h1 {
+    overflow: hidden;
+}
+h1 a  {
+    display: block;
+    text-indent:-1000em;
+    overflow: hidden;
+    background:url(/images/logo.png) no-repeat 0 0 ;
+    width:444px;
+    height:217px;  
+}
+.info_box {
+    margin:15px 0 30px;
+    padding-left:30px;
+    
+}
+.info_box h2 {
+    font-size:18px;
+    color:#82C28F;
+    margin:30px 0 20px;
+}
+.info_box h2 a {
+    color:inherit;
+}
+.info_box ul {
+    padding:0 0 0 20px;
+}
+.info_box ul li {
+    margin-bottom:4px;
+}
+.about_summary {
 
-        html, body {
-            height:100%;
-            font-family: Helvetica, Arial, sans-serif;
-            color:#B2B2B2;
-            font-size:12px;
-        }
-        .outer_frame {
-            position:absolute;
-            /*top:50%;*/
-            top:50px;
-            left:50%;
-            margin-left:-222px;
-            /*margin-top:-307px;*/
-        }
-        .info {
-            padding:10px 0 20px 30px;
-            /*display:none;*/
-            /*margin-bottom:20px;*/
-        }
-        .info .email {
-            text-decoration: none;
-            color:#B2B2B2;
-        }
-        .info div {
-            margin-bottom:5px;
-        }
-        h1 {
-            text-indent:-1000em;
-            margin:auto;
-            background:url(/static/images/logo.png) no-repeat 0 0 ;
-            width:444px;
-            height:217px;
-        }
-        .services {
-            margin-top:10px;
-            padding-left:30px;
-            margin-bottom:20px;
-        }
-        .services h2 {
-            font-size:18px;
-            color:#82C28F;
-        }
-        .services ul {
-            padding:0 0 0 20px;
-        }
-        .services ul li {
-            margin-bottom:4px;
-        }
-        a {
-            color:#69f;
-        }
-    </style>
+}
+.about_summary p {
+    line-height:1.7em;
+    margin:8px 0 32px;
+    color:#333;
+}
+.extension_tester_alpha_box,
+.form_success_box,
+.form_modal_box {
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-left:-230px;
+    margin-top:-195px;
+    width:400px;
+    background-color: white;
+    min-height: 150px;
+    box-shadow: 0px 0px 6px #ccc;
+    padding:0 30px 30px;
+}
+.close_btn, .close_form_btn {
+    position: absolute;
+    right:20px;
+    top:10px;
+    font-size:16px;
+}
+.extension_tester_alpha_box h1 {
+    line-height: 1.7em;
+    margin-bottom: 4px;
+}
+input, select, option, textarea {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-size: 16px;
+}
+.extension_tester_alpha_box input[type=text] {
+    font-size:16px;
+    border:1px solid #ccc;
+    background-color: white;
+    border-radius: 3px;    
+    margin:3px 0 10px;
+    padding:6px 10px;
+    width:320px;
+    /*text-indent: 10px;*/
+
+}
+
+.extension_tester_alpha_box button[type=submit] {
+    border:1px solid #ccc;
+    background-color: white;
+    border-radius: 3px;
+    padding:8px 16px;
+    cursor: pointer;
+    
+}
+.extension_tester_alpha_box button[type=submit]:hover {
+    background-color: #efefef;
+}
+.extension_tester_alpha_box textarea {
+    border:1px solid #ccc;
+    background-color: white;
+    border-radius: 3px;   
+    margin:3px 0 10px; 
+    padding:6px 10px;
+    width:320px;
+    min-height: 55px;
+    
+}
+
+/**
+    mobile
+*/
+@media (max-width: 450px) {
+    html,body {
+        font-size:16px;
+    }
+    .info_box h2 {
+        font-size:24px;
+    }
+    h1 a {
+        width:100%;
+        background-size:  100vw;
+        height:calc(100vw * (217/444));
+        margin-bottom: 0;
+    }
+    .contact_info {
+        padding-top:0;
+    }
+    .outer_frame {
+        margin-top:30px;
+        width:100%;
+    }
+    .about_summary p {
+        margin-right:20px;
+    }
+    .about_summary {
+        margin:0 0 100px;
+    }
+    .info_box {
+        margin-top:0;
+    }
+    .info_box p, .info_box ul {
+        margin-right:20px;
+    }
+    .extension_tester_alpha_box {
+        width:80vw;
+        margin-left:inherit;
+        left:0;
+    }
+    .extension_tester_alpha_box input[type=text] {
+        /*width:90vw;*/
+    }
+}
+</style>
     <meta name="google-site-verification" content="lCL18UdcF_yhnMJGX4nHp2YxWHY4ASREb_uBGOI6bFk" />
 </head>
 <body>
    
     <div class="outer_frame">
-        <h1>DevelopNYC</h1>
-        <div class="info">
-
+        <h1><a href="/">Develop NYC</a></h1>
+        <div class="contact_info">
             <div class="title_role">
-                Gregory Tomlinson, Principal Developer
+                <a name="#contact"></a>
+                Gregory Tomlinson, Lead Front-End Engineer
             </div> 
+
+            <div class="">
+                L: <a class="email" href="https://www.google.com/maps/place/New+York,+NY/@40.6976637,-74.1197636,11z/data=!4m5!3m4!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!8m2!3d40.7127753!4d-74.0059728" target="_blank">NYC</a>
+            </div>               
             <div class="telephone">
-                T: 1-347-693-8981
+                T: <a class="email" href="tel:+1-347-693-8981">+1 (347) 693-8981</a>
             </div>      
             <div class="">
-                E: <script type="text/javascript"><!--
-    var zebfvfd = ['o','g','e','n','a','e','.','a',':','a','m','n','@','s','.','m','.','=','e','a','o','"','"','i','t','o','l',' ','g','c','o','a','@','s','a','<','i','m','m','i','i','n',' ','<','g','h','i','>','l','i','n','l','/','"','=','s','g','o','o','y','e','c','l','"','g','r','l','t','o','m','>','r','s','r','y','c','g','a','l','f','m','r','m','o','t','r','.','o','m','l'];var dhhvbfo = [31,59,61,75,54,18,82,36,15,79,69,29,76,30,23,78,66,50,5,1,14,51,8,11,67,41,70,2,62,45,25,10,33,73,88,0,37,85,9,55,80,32,44,86,34,3,28,58,27,71,72,56,87,57,7,49,16,84,63,22,52,83,81,43,19,21,46,24,20,53,89,17,48,64,65,40,77,47,12,6,35,4,42,74,13,60,39,68,26,38];var oow= new Array();for(var i=0;i<dhhvbfo.length;i++){oow[dhhvbfo[i]] = zebfvfd[i]; }for(var i=0;i<oow.length;i++){document.write(oow[i]);}
-    // --></script> 
+                E: <a class="email" href="mailto:email.developnyc@gmail.com">email.developnyc@gmail.com</a>
             </div>      
+           
         </div>
-        <div class="services">
-            <h2>Services</h2>
+        <div class="info_box">
+            <a name="services"></a>
+            <h2><a href="#services">Services</a></h2>
             <ul>
-                <li>Web+Design Development</li>
-                <li>HTML/CSS/JavaScript</li>
-                <li>Python, Lua</li>
-                <li>Mobile+Web</li>
-                <li>Games</li>
+                <li>Unparalleled JavaScript Expertise</li>
+                <li>HTML5 / CSS3</li>
+                <li>Fullstack Python</li>
+                <li>Client Rendering Performance Optimizations</li>
+                <li>JavaScript Performance Optimizations</li>
+                <li>Functional JavaScript approach</li>
+                <li>Cost Avoidance Development Strategy</li>
+                <li>REST &amp; CRUD Applications</li>
+                <li>Rapid Prototypes, Rapid Application Development</li>
+                <li>Web Application Development</li>
+                <li>WebRTC Application Development</li>
+                <li>Canvas Tag Illustration and Animation</li>  
+                <li>Chrome Extension Development</li>              
+                <li>IoT Application Development</li>  
+                <li>Client Side Framework Review</li>
+                <li>Code Review</li>
+                <li>Concept-to-Implementation</li>
+                <li>SEO to XSS Advising</li>
+                <li>Product Driven Engineering</li>
+                <li>Articulate Documention</li>
+                <li>Product Experience Engineering</li>
+                <li>Honest Advice</li>
             </ul>
+            <p>Hourly and contract rates available by request. <a class="email" href="mailto:email.developnyc@gmail.com">email.developnyc@gmail.com</a></p>
         </div>
-        <div class="services">
-            <h2>Games</h2>
+        <div class="info_box">
+            <p>Gregory Tomlinson can be integrated into your team. Either on-site or remote. 
+            Hire a professional, experienced engineer today, start shipping production quality code tomorrow.</p>
+            <a name="on-site"></a>
+            <h2><a href="#on-site">On-Site</a></h2>
             <ul>
-                <li>Skwerd, iOS <a target="new" href="http://playskwerd.com">link</a></li>
-                <li>Giphy Memory, web <a target="new" href="http://memory.labs.giphy.com">link</a></li>
-                <!-- <li>Cookie Quest, web<a target="new" href="http://cookie-quest.developnyc.com/">link</a></li> -->
-                <!-- <li><a href="">link</a></li> -->
+                <li>Technical Consulting for Design Teams</li>
+                <li>Client Side Advising for Back-End Teams</li>
+                <li>Practical Product Recommendations</li>
+                <li>Client Side Architecture</li>
+                <li>Lean Development Methodology</li>
+                <li>Self Directed, Dependable</li>
+                <li>Junior Developer Mentoring</li>                
+                <li>New Hire Screening</li>
+                <li>Team Growth Strategies</li>
+                <li>Full Team Integration</li>
+                <li>Technical Leadership</li>
+            </ul>
 
-            </ul>
-        </div>
-        <div class="services">
-            <h2>Clients & Projects</h2>
+            <a name="remote"></a>
+            <h2><a href="#remote">Remote</a></h2>
             <ul>
-                <li>Betaworks</li>
-                <li>Giphy</li>
-                <li>Play Skwerd</li>
-                <li>Tapestry</li>
-                <li>Alphaworks</li>
-                <li>Hiho Batik</li>
-                <li>Wayfinder</li>
-                <li>PhotoSwirl</li>
-                <li>TipTop</li>
-                <li>Telecast</li>
+                <li>Senior Software Engineer Quality Code</li>
+                <li>Available for Team Meetings</li>
+                <li>Slack Participation</li>
+                <li>Full Team Integration</li>
+                <li>Concept Explorations</li>
             </ul>
+            
         </div>
-        
-        
+        <div class="info_box">
+            <a name="projects"></a>
+            <h2><a href="#projects">Notable Projects</a></h2>
+            <ul>
+                <li><a class="extension_tester_prompt" href="#coming_soon">Magnifier Color Dropper</a></li>
+                <li><a target="_blank" href="https://github.com/bitly/bitly_chrome_extension">bitly Chrome Extension</a></li>
+                <li><a target="_blank" href="https://github.com/gtzilla/fastFrag">fastFrag</a></li>
+            </ul>
+            <a name="clients"></a>
+            <h2><a href="#clients">Clients</a></h2>
+            <ul>
+                <li>betaworks</li>
+                <li>Giphy</li>
+                <li>PhotoSwirl</li>
+                <li>Get Perch</li>
+                <li>SmartThings</li>
+                <li>Blocpower</li>
+                <li>bitly</li>
+                <li>Tapestry</li>
+            </ul>
+        </div> 
+
+        <div class="info_box about_summary">
+            <a name="about"></a>
+            <h2><a href="#about">About Develop NYC</a></h2>
+            <p>When I started my career in New York City, I quickly noticed a pattern. 
+                While there were many Junior Front-End Engineers, 
+                there were few Senior Front-End Engineers. In the first decade of my career, I learned why. 
+                Front-End Engineers have no professional path to seniority. I watched many colleagues become managers, 
+                be it technical managers or product managers. I watched as their skills wither. They stopped writing code.
+                They stopped advancing their techinque. 
+                I wanted a different future. I wanted a future where being an expert at Client Side Development 
+                and Front-End Engineering is viable. A future where continous improvement is important. I founded Develop NYC to be a solution. 
+                To provide New York City with expert Front-End Engineering. To foster web products in both startups and corportations. 
+            </p>
+
+            <p>
+                The landscape of technologies on the Front-End is constantly changing. 
+                Techniques, tricks and hacks that were common place in the late 1990s 
+                have no home in the world of ES2015 and beyond. Staying up-to-date with 
+                the latest improvements to JavaScript and the avalanche of 
+                frameworks is a fulltime job. While the technology changes, sound programming 
+                practices do not. Patience and forethought are hallmarks of a senior engineer.
+                When it comes to building applications that generate 
+                millions in revenue, risk needs a place. Finding a balance between fastest 
+                time-to-market and maintainable is best learned with experience.
+            </p>
+            <a name="experience"></a>
+            <h2><a href="#experience">Experience</a></h2>
+            <p>
+                I made my first website in 1998. 
+                A Flash site to display photographs. I was hooked. Today, with two decades 
+                of experience, I know the browser well. Though the most popular browser 
+                progressed from Netscape to Internet Explorer and now Google Chrome, the basics
+                of building a profitable technical enterprise remain the same. 
+                It requires a well trained team.
+            </p>
+            <p>
+                I can help you grow a team, train developers and produce code. Building client 
+                applications, often in JavaScript, I find that each 
+                revision helps build team momentum. Concepts, which are discussed 
+                only in meetings -- product features -- existing only in PhotoShop can suddenly be viewed.
+                Once only seen on a projector, now a simple, 
+                yet robust, web browser brings the design to life. 
+                It's morale super fuel.
+            </p>
+            <p>
+                The popularity of JavaScript has exploded over the 
+                last decade. From mere toy language, relegated to the 
+                browser, it's grown up and is everywhere. Authors such as 
+                Douglas Crockford broke new ground, insisting 
+                JavaScript is a language to be taken seriously.  Today, it powers 
+                platforms like React Native and PhoneGap. It has open source transpilers.
+                JavaScript powers the rich Chrome Extension ecosystem. Also, it's
+                a powerful server side language. It has a 
+                sprawling package management system called npm. JavaScript
+                is here to stay, it's expanding. It's relatively simple to learn
+                and like any language, a lifetime to master.
+            </p>
+            <p>
+                I work with Front-End Engineering Teams, Back-End and Full-Stack 
+                Only Teams. Teams of various configurations. In all cases, the team
+                needs Client Side expertise and Product Driven Development. 
+                Product, Business, Design and Engineering are all
+                relevant stakeholders for the final Front-End product. 
+                Clear, effective communication is critical to reducing 
+                confusion and creating value.
+                In all interactions, I bring a level of senority, expertise and 
+                patience to help bring your next product revision to market. 
+            </p>
+            <p>
+                Contact Develop NYC and Gregory Tomlinson today <a class="email" href="mailto:email.developnyc@gmail.com">email.developnyc@gmail.com</a>
+            </p>
+        </div>               
     </div>
+    <div class="placeholder_tester_form"></div>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -128,6 +375,9 @@
       ga('send', 'pageview');
 
     </script>    
-    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    <script type="text/javascript" src="/js-vendor/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/js-vendor/underscore-1.8.3.min.js"></script>
+    <script type="text/javascript" src="/js-dist/templates.js"></script>
+    <script type="text/javascript" src="/js/main.index.js"></script>
 </body>
 </html>
