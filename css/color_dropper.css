@@ -1,0 +1,42 @@
+* {
+	margin:0;
+	padding:0;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size:14px;
+	color:#555;
+}
+.centered_container {
+	width:550px;
+	margin:0 auto 100px;
+}
+.centered_container h1 {
+	font-size:28px;
+	color:#111;
+	margin:10px 0 30px;
+}
+.centered_container p {
+	line-height: 1.6em;
+}
+.naked_list {
+	list-style: none;
+}
+.color_cell {
+	width:25px;
+	height:25px;
+}
+.colors_bar {
+	clear:both;
+	float:none;
+	overflow: auto;
+	margin:10px 0 20px;
+}
+.colors_bar ul {
+	list-style: none;
+
+}
+.colors_bar ul li {
+	float:left;
+}
+.footer {
+
+}

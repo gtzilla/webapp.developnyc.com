@@ -50,7 +50,7 @@ function on_form_submit($scope) {
       "form-name":$form.attr("name")
     }
 
-    if(!$email.get(0).valid || !payload.email || !payload.message) {
+    if(!$email.get(0).validity.valid || !payload.email || !payload.message) {
       // console.log("bad input values");
       let html = index.form_fail_templated({
         message:"Please complete all fields."
