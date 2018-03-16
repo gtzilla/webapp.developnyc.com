@@ -49,7 +49,8 @@ function on_form_submit($scope) {
       project:$project.val(),
       "form-name":$form.attr("name")
     }
-    if(!payload.email || !payload.message) {
+
+    if(!$email.get(0).valid || !payload.email || !payload.message) {
       // console.log("bad input values");
       let html = index.form_fail_templated({
         message:"Please complete all fields."

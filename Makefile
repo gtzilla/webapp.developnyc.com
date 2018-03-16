@@ -21,4 +21,4 @@ all:
 	@make js-vendor
 	@make build
 
-.PHONY: watch all clean
+.PHONY: watch all clean reset-vendor js-vendor
