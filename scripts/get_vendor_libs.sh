@@ -13,6 +13,11 @@ UNDERSCORE_URL="http://underscorejs.org/underscore-min.js"
 UNDERSCORE_VER="1.8.3"
 UNDERSCORE_SHA1="2a515632e0fd8ffdeb8d94cb25e44cf287feb32f"
 
+# https://github.com/netlify/gotrue-js
+GOTRUE_URL="https://raw.githubusercontent.com/netlify/gotrue-js/master/browser/gotrue.js"
+GOTRUE_VER="1.0"
+GOTRUE_SHA1="349b3ce5a8dcd364a7e1fe1debea0ecc37597a84"
+
 if   which shasum  >/dev/null; then SHACMD="shasum -a1"
 elif which sha1sum >/dev/null; then SHACMD="sha1sum"
 else
@@ -42,3 +47,4 @@ fetch_file() {
 
 fetch_file "jquery-${JQUERY_VER}.min.js" $JQUERY_SHA1 $JQUERY_URL
 fetch_file "underscore-${UNDERSCORE_VER}.min.js" $UNDERSCORE_SHA1 $UNDERSCORE_URL
+fetch_file "gotrue-${GOTRUE_VER}.js" $GOTRUE_SHA1 $GOTRUE_URL
