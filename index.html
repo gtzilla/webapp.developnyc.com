@@ -145,6 +145,8 @@ input, select, option, textarea {
     position: relative;
     color:#222;
     min-height: 690px;
+    min-width: 600px;
+    border-radius: 4px;
 }
 /**
     Collapsing margin hack
@@ -164,11 +166,13 @@ input, select, option, textarea {
     text-transform: uppercase;
     line-height: 1.8em;
     margin:100px 0 20px;
+    transition: font-size 200ms linear;
 }
 .foot_newsletter_inner p {
     font-size: 22px;
     line-height: 1.6em;
     margin:10px 0 30px;
+    margin-right:20px;
 }
 
 
@@ -181,7 +185,7 @@ input, select, option, textarea {
 #mc_embed_signup .clear {clear:both;}
 #mc_embed_signup input {border: 1px solid #ABB0B2; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
 #mc_embed_signup{ clear:left; font:14px Roboto,Helvetica,Arial,sans-serif;  width:444px;}
-#mce-EMAIL {width:444px;}
+/*#mce-EMAIL {width:444px;}*/
 #mc_embed_signup input:focus {border-color:#333;}
 #mc_embed_signup .button {clear:both; background-color: #aaa; border: 0 none; border-radius:4px; transition: all 0.23s ease-in-out 0s; color: #FFFFFF; cursor: pointer; display: inline-block; font-size:15px; font-weight: normal; height: 32px; line-height: 32px; margin: 0 5px 10px 0; padding: 0 22px; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: auto;}
 #mc_embed_signup .button:hover {background-color:#777;}
@@ -192,9 +196,9 @@ input, select, option, textarea {
 
 
 /**
-    mobile
+    mobile. narrow screens
 */
-@media (max-width: 450px) {
+@media (max-width: 650px) {
     .info_box h2 {
         font-size:24px;
     }
@@ -204,6 +208,7 @@ input, select, option, textarea {
         height:calc(100vw * (217/444));
         margin-bottom: 0;
     }
+
     .contact_info {
         padding-top:0;
     }
@@ -234,7 +239,70 @@ input, select, option, textarea {
         font-size:22px;
         margin-right:20px;
     }
+    .foot_newsletter_inner {
+        
+        margin:10px auto;
+        padding:30px;
+        /*padding-top:1px;*/
+    }
+    .foot_newsletter_inner h3 {
+        font-size:50px;
+        margin:20px 0;
+    }
+
+    .foot_newsletter {
+        width:95vw;
+        width:auto;
+        min-width: auto;
+        height:auto;     
+        border-radius: 0;   
+    }
+
 }
+@media (max-width: 560px) {
+    .foot_newsletter_inner {
+        
+    }
+}
+@media (max-width: 500px) {
+    .foot_newsletter_inner {
+        /*padding:5vw;*/
+    }
+    .foot_newsletter_inner, 
+    #mc_embed_signup {
+        width:auto;
+    }    
+    .foot_newsletter_inner h3 {
+        font-size: 46px;
+    }    
+
+    #mc_embed_signup .mc-field-group input {
+        /*width:calc(90vw - 40px);*/
+        width:100%;
+    }  
+    #mc_embed_signup .indicates-required {
+        /*display: none;*/
+    }
+
+}
+@media (max-width: 460px) {
+
+
+    .foot_newsletter_inner h3 {
+        font-size: 42px;
+    }
+      
+}
+@media (max-width: 400px) {
+    .foot_newsletter_inner h3 {
+        font-size:40px;
+    }
+    .foot_newsletter_inner p {
+        font-size:20px;
+        line-height: 1.6em;
+    }      
+}
+
 </style>
 <meta name="google-site-verification" content="lCL18UdcF_yhnMJGX4nHp2YxWHY4ASREb_uBGOI6bFk" />
 </head>
@@ -416,7 +484,7 @@ input, select, option, textarea {
     <div class="foot_newsletter">
         <div class="foot_newsletter_inner">
             <h3>Newsletter</h3>
-            <p>Sign up now! All the latest right in your inbox. Learn about new apps from Develop NYC. Be the first to get calls for testers annoucements. Stay up-to-date with the Develop NYC newsletter.</p> 
+            <p>Sign up now! All the latest right in your inbox. Learn about new apps from Develop NYC. Be the first to access beta software. Stay up-to-date with the Develop NYC newsletter.</p> 
             <!-- <a href="http://eepurl.com/dpHElX">Sign up</a> --> 
 
 <!-- Begin MailChimp Signup Form -->
