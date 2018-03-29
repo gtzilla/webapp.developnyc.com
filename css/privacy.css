@@ -1,0 +1,38 @@
+html, body {
+    height:100%;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    color:#666;
+    font-size:16px;
+    line-height: 1.6em;
+}
+* {
+    box-sizing: content-box;
+}
+body {
+    margin:0 0 150px;
+}
+a {
+    color:#69c;
+    text-decoration: none;
+}
+h1 {
+    overflow: hidden;
+}
+.outer_frame {
+	width:800px;
+	margin:0 auto 150px;
+}
+h1 a  {
+    display: block;
+    text-indent:-1000em;
+    overflow: hidden;
+    background:url(/images/logo.png) no-repeat 0 0 ;
+    width:444px;
+    margin:0 auto;
+    height:217px;  
+}
+.outer_frame h2 {
+    font-size:24px;
+    color:#82C28F;
+    margin:70px 0 25px;	
+}
